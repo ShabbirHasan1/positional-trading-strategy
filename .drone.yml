@@ -9,17 +9,17 @@ variables:
   ORDER_SECRET:${ORDER_SECRET}
   
 steps:
--config-set-up
--build-docker
+- config-set-up
+- build-docker
 
 config-set-up:
   image: gargikekre/positional_strategy_005:1
-     auth:
-          username: gargikekre  
-          password: P@ssw0rd2459945
+    auth:
+      username: gargikekre  
+      password: P@ssw0rd2459945
   variables:
     DOCKERFILE: Dockerfile
-	CONFIGFILE: config.py
+    CONFIGFILE: config.py
   commands:
   - cat $CONFIGFILE
   - $sed 's|market_key1|'$MARKET_KEY'|g' $CONFIGFILE
@@ -33,6 +33,6 @@ build-docker:
   - python3 main_bnf_buy.py 
   - python3 main_bnf_sell.py
   - python3 main_nifty_buy.py
-  -	python3 main_nifty_sell.py
+  - python3 main_nifty_sell.py
   
 
