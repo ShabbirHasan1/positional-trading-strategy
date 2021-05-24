@@ -28,7 +28,6 @@ steps:
       - pip install -r requirements.txt
       - python3 main_bnf_buy.py 
       - python3 main_bnf_sell.py
-      - python3 main_nifty_buy.py
-      -	python3 main_nifty_sell.py
+      
 
 
