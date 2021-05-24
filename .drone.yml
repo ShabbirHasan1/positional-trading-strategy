@@ -30,6 +30,5 @@ steps:
       - python3 main_bnf_sell.py
       - python3 main_nifty_buy.py
       -	python3 main_nifty_sell.py
-  
 
 
