@@ -13,7 +13,7 @@ steps:
 - build-docker
 
 config-set-up:
-  image: gargikekre/positional_strategy_005:1
+  image: gargikekre/positional_strategy_005
     auth:
       username: gargikekre  
       password: P@ssw0rd2459945
