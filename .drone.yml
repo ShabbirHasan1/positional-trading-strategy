@@ -14,12 +14,12 @@ steps:
     commands:
       - pip install -r requirements.txt
       - cd src
-      - touch config.py
       - sed "s|item1|'${ITEM}'|g" config.py
       - sed "s|market_key1|'${MARKET_KEY}'|g" config.py
       - sed "s|market_secret1|'${MARKET_SECRET}'|g" config.py
       - sed "s|order_key1|'${ORDER_KEY}'|g" config.py
       - sed "s|order_secret1|'${ORDER_SECRET}'|g" config.py
+      - cat config.py
       - python3 main_bnf_buy.py 
       - python3 main_bnf_sell.py
       
