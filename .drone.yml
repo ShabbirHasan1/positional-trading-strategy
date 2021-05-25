@@ -1,29 +1,22 @@
 kind: pipeline
-name: stategy
-
-variables:
-  ITEM=${ITEM}
-  MARKET_KEY=${MARKET_KEY}
-  MARKET_SECRET=${MARKET_SECRET}
-  ORDER_KEY:${ORDER_KEY}
-  ORDER_SECRET:${ORDER_SECRET}
+name: default
   
 steps:
   - name: config-set-up 
-    # image: gargikekre/positional_strategy_005:2
-    # auth:
-    #   username: gargikekre  
-    #   password: P@ssw0rd2459945
+    image: gargikekre/positional_strategy_005:2
+    auth:
+      username: gargikekre  
+      password: P@ssw0rd2459945
     variables:
       DOCKERFILE: Dockerfile
       CONFIGFILE: config.py
     commands:
       - cat $CONFIGFILE
-      - $sed 's|item1|'$ITEM'|g' $CONFIGFILE
-      - $sed 's|market_key1|'$MARKET_KEY'|g' $CONFIGFILE
-      - $sed 's|market_secret1|'$MARKET_SECRET'|g' $CONFIGFILE
-      - $sed 's|order_key1|'$ORDER_KEY'|g' $CONFIGFILE
-      - $sed 's|order_secret1|'$ORDER_SECRET'|g' $CONFIGFILE
+      - sed "s|item1|'${ITEM}'|g" $CONFIGFILE
+      - sed "s|market_key1|'${MARKET_KEY}'|g" $CONFIGFILE
+      - sed "s|market_secret1|'${MARKET_SECRET}'|g" $CONFIGFILE
+      - sed "s|order_key1|'${ORDER_KEY}'|g" $CONFIGFILE
+      - sed "s|order_secret1|'${ORDER_SECRET}'|g" $CONFIGFILE
 
   - name: build-docker
     commands:
