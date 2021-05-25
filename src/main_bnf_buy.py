@@ -166,4 +166,4 @@ def main(item,market_key,market_secret,order_key,order_secret):
         except Exception as e:
           print(e)
 if __name__ == "__main__":   
-    main(item1, market_key1, market_secret1, order_key1, order_secret1)
+    main(item, market_key, market_secret, order_key, order_secret)
