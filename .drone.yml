@@ -3,7 +3,10 @@ name: default
   
 steps:
   - name: config-set-up 
-    image: python
+    image: gargikekre/positional_strategy_005:1
+      auth:
+        username: gargikekre  
+        password: P@ssw0rd2459945
     # when:
     #   status:
     #     - failure
