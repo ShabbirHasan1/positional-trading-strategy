@@ -3,7 +3,7 @@ name: default
   
 steps:
   - name: config-set-up 
-    image: pyhton
+    image: python
               # auth:
               #   username: gargikekre  
               #   password: P@ssw0rd2459945
