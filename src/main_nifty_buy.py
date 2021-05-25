@@ -12,7 +12,7 @@ from datetime import date, datetime, timedelta, time
 from xts_class import XTS_parse, XTS_order
 from strategy import strike_nif_buy
 import pymongo
-from confi import item2,market_key2,market_secret2,order_key2,order_secret2
+from config import item2,market_key2,market_secret2,order_key2,order_secret2
 
 
 def main(item,market_key,market_secret,order_key,order_secret):
