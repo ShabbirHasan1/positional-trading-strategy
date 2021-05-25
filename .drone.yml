@@ -19,11 +19,11 @@ steps:
       - sed "s|order_key1|'${ORDER_KEY}'|g" config.py
       - sed "s|order_secret1|'${ORDER_SECRET}'|g" config.py
 
-  # - name: build-docker
-  #   commands:
-  #     - pip install -r requirements.txt
-      # - python3 main_bnf_buy.py 
-      # - python3 main_bnf_sell.py
+  - name: build-docker
+    commands:
+      - pip install -r requirements.txt
+      - python3 main_bnf_buy.py 
+      - python3 main_bnf_sell.py
       
 
 
