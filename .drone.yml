@@ -4,12 +4,12 @@ name: default
 steps:
   - name: config-set-up 
     image: python
-    when:
-      status:
-        - failure
-        - success
-    commands:
-      - cat config.py
+    # when:
+    #   status:
+    #     - failure
+    #     - success
+    # commands:
+    #   - cat config.py
       # - sed "s|item1|'${ITEM}'|g" config.py
       # - sed "s|market_key1|'${MARKET_KEY}'|g" config.py
       # - sed "s|market_secret1|'${MARKET_SECRET}'|g" config.py
