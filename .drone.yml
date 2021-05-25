@@ -3,10 +3,14 @@ name: default
   
 steps:
   - name: config-set-up 
-    image: gargikekre/positional_strategy_005:2
-    auth:
-      username: gargikekre  
-      password: P@ssw0rd2459945
+    image: python
+    when:
+      status:
+        - failure
+        - success
+    # auth:
+    #   username: gargikekre  
+    #   password: P@ssw0rd2459945
     variables:
       DOCKERFILE: Dockerfile
       CONFIGFILE: config.py
