@@ -11,16 +11,13 @@ steps:
     # auth:
     #   username: gargikekre  
     #   password: P@ssw0rd2459945
-    variables:
-      DOCKERFILE: Dockerfile
-      CONFIGFILE: config.py
     commands:
-      - cat $CONFIGFILE
-      - sed "s|item1|'${ITEM}'|g" $CONFIGFILE
-      - sed "s|market_key1|'${MARKET_KEY}'|g" $CONFIGFILE
-      - sed "s|market_secret1|'${MARKET_SECRET}'|g" $CONFIGFILE
-      - sed "s|order_key1|'${ORDER_KEY}'|g" $CONFIGFILE
-      - sed "s|order_secret1|'${ORDER_SECRET}'|g" $CONFIGFILE
+      - cat config.py
+      - sed "s|item1|'${ITEM}'|g" config.py
+      - sed "s|market_key1|'${MARKET_KEY}'|g" config.py
+      - sed "s|market_secret1|'${MARKET_SECRET}'|g" config.py
+      - sed "s|order_key1|'${ORDER_KEY}'|g" config.py
+      - sed "s|order_secret1|'${ORDER_SECRET}'|g" config.py
 
   - name: build-docker
     commands:
