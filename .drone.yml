@@ -3,14 +3,14 @@ name: default
   
 steps:
   - name: config-set-up 
-    image: python
-    # auth:
-    #   username: gargikekre  
-    #   password: P@ssw0rd2459945
-    # when:
-    #   status:
-    #     - failure
-    #     - success
+    image: pyhton
+              # auth:
+              #   username: gargikekre  
+              #   password: P@ssw0rd2459945
+    when:
+      status:
+        - failure
+        - success
     # commands:
     #   - cat config.py
       # - sed "s|item1|'${ITEM}'|g" config.py
