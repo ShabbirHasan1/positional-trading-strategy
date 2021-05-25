@@ -14,7 +14,8 @@ steps:
     commands:
       - pip install -r requirements.txt
       - cd src
-      - sed "s|item1|'${ITEM}'|g;s|market_key1|'${MARKET_KEY}'|g;s|market_secret1|'${MARKET_SECRET}'|g;s|order_key1|'${ORDER_KEY}'|g;s|order_secret1|'${ORDER_SECRET}'|g" config.py
+      - touch config.py
+      - sed -i "s|item1|'${ITEM}'|g;s|market_key1|'${MARKET_KEY}'|g;s|market_secret1|'${MARKET_SECRET}'|g;s|order_key1|'${ORDER_KEY}'|g;s|order_secret1|'${ORDER_SECRET}'|g" config.py
       # - sed "s|market_key1|'${MARKET_KEY}'|g" config.py
       # - sed "s|market_secret1|'${MARKET_SECRET}'|g" config.py
       # - sed "s|order_key1|'${ORDER_KEY}'|g" config.py
